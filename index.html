@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hùng &amp; Diệp | Thiệp cưới online</title>
+<meta name="description" content="Trân trọng kính mời bạn đến dự tiệc cưới của Hùng & Diệp — 18:00, Thứ Ba 17.11.2026 tại Golden Palace, Nam Định.">
+<!-- Ảnh hiện khi gửi link qua Zalo/Facebook (thay đường dẫn sau khi đã có link GitHub Pages) -->
+<meta property="og:title" content="Hùng & Diệp | Thiệp cưới online">
+<meta property="og:description" content="18:00, Thứ Ba 17.11.2026 · Golden Palace, Nam Định">
+<meta property="og:image" content="images/anh-1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Be+Vietnam+Pro:wght@300;400;500&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f2ea; --paper:#fffdf9; --ink:#3b3330; --muted:#8a7f78;
+    --accent:#a8865b; --accent-soft:#e9dcc8; --line:#dccfbd;
+    --serif:"Cormorant Garamond",Georgia,serif;
+    --script:"Great Vibes",cursive;
+    --sans:"Be Vietnam Pro",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+
+  /* ---------- Thanh điều hướng ---------- */
+  .nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+       padding:14px 20px;background:rgba(247,242,234,.82);backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:.3s}
+  .nav.scrolled{border-bottom-color:var(--line)}
+  .nav .mono{font-family:var(--serif);font-size:20px;letter-spacing:.2em;color:var(--accent)}
+  .nav ul{list-style:none;display:flex;gap:22px;font-size:13px;letter-spacing:.06em}
+  .nav ul a{text-decoration:none;color:var(--muted)}
+  .nav ul a:hover{color:var(--accent)}
+  @media (max-width:640px){.nav ul{display:none}}
+
+  /* ---------- Hero (ẢNH 1) ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;justify-content:center;text-align:center;
+        color:#fff;overflow:hidden;background:linear-gradient(160deg,#c9b49a,#8b735c)}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:zoom 14s ease-out forwards}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.05) 40%,rgba(0,0,0,.55))}
+  .hero .inner{position:relative;z-index:2;padding:0 20px 14vh}
+  .hero .eyebrow{font-family:var(--serif);font-style:italic;font-size:20px;letter-spacing:.08em;opacity:.95}
+  .hero h1{font-family:var(--script);font-weight:400;font-size:clamp(64px,14vw,120px);line-height:1.1;margin:6px 0 4px;text-shadow:0 2px 20px rgba(0,0,0,.25)}
+  .hero .date{font-family:var(--serif);font-size:22px;letter-spacing:.3em}
+  .hero .scroll{display:inline-block;margin-top:34px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;opacity:.85}
+  .hero .scroll::after{content:"";display:block;width:1px;height:40px;margin:10px auto 0;background:#fff;animation:drip 2s infinite}
+  @keyframes zoom{to{transform:scale(1)}}
+  @keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  .strip{background:var(--ink);color:var(--accent-soft);text-align:center;padding:14px 16px;font-family:var(--serif);font-size:17px;letter-spacing:.12em}
+  .strip b{font-weight:500;color:#fff}
+
+  /* ---------- Section chung ---------- */
+  section{padding:90px 20px}
+  .wrap{max-width:720px;margin:0 auto;text-align:center}
+  .label{font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--accent)}
+  .title{font-family:var(--serif);font-weight:400;font-size:clamp(32px,6vw,44px);line-height:1.25;margin:10px 0 26px}
+  .script{font-family:var(--script);font-size:46px;color:var(--accent);line-height:1.2}
+  .divider{display:flex;align-items:center;gap:14px;justify-content:center;color:var(--accent);margin:26px 0;font-family:var(--serif);letter-spacing:.2em}
+  .divider::before,.divider::after{content:"";width:60px;height:1px;background:var(--line)}
+  p.lead{font-size:16px;color:#5a504b;margin-bottom:16px}
+
+  /* ---------- Thông tin tiệc ---------- */
+  #wedding-day{background:var(--paper)}
+  .event{max-width:460px;margin:0 auto;border:1px solid var(--line);padding:44px 28px;position:relative}
+  .event::before{content:"";position:absolute;inset:8px;border:1px solid var(--accent-soft);pointer-events:none}
+  .event h3{font-family:var(--script);font-weight:400;font-size:52px;color:var(--accent);line-height:1.1}
+  .event .time{font-family:var(--serif);font-size:24px;margin:14px 0 18px}
+  .event .venue{font-family:var(--serif);font-size:28px;font-weight:600;letter-spacing:.04em}
+  .event .addr{color:var(--muted);font-size:15px;margin-top:4px}
+  .btn{display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:11px 26px;border:1px solid var(--accent);color:var(--accent);
+       text-decoration:none;font-size:13px;letter-spacing:.12em;text-transform:uppercase;background:transparent;cursor:pointer;font-family:var(--sans);transition:.25s}
+  .btn:hover{background:var(--accent);color:#fff}
+  .btn.solid{background:var(--accent);color:#fff}
+  .btn.solid:hover{background:#8f7049}
+
+  /* ---------- Đếm ngược ---------- */
+  .countdown{display:flex;justify-content:center;gap:clamp(10px,4vw,28px);margin-top:60px}
+  .countdown div{min-width:68px}
+  .countdown b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(38px,9vw,54px);line-height:1;color:var(--ink)}
+  .countdown span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+  /* ---------- ẢNH 2 ---------- */
+  .photo2{position:relative;height:min(90vh,760px);overflow:hidden;background:linear-gradient(160deg,#d8c7b1,#a68e75)}
+  .photo2 img{width:100%;height:100%;object-fit:cover}
+  .photo2 .cap{position:absolute;left:0;right:0;bottom:8%;text-align:center;color:#fff;font-family:var(--script);font-size:clamp(44px,9vw,72px);text-shadow:0 2px 16px rgba(0,0,0,.35)}
+
+  /* ---------- RSVP ---------- */
+  form{max-width:440px;margin:30px auto 0;text-align:left;display:grid;gap:18px}
+  label{font-size:13px;color:var(--muted);display:block;margin-bottom:6px}
+  input,select{width:100%;padding:12px 14px;border:1px solid var(--line);background:var(--paper);font:inherit;font-size:15px;color:var(--ink);border-radius:0;outline:none}
+  input:focus,select:focus{border-color:var(--accent)}
+  .radio{display:grid;gap:8px}
+  .radio label{display:flex;gap:10px;align-items:center;color:var(--ink);font-size:15px;margin:0;cursor:pointer}
+  .radio input{width:auto;accent-color:var(--accent)}
+  form .btn{justify-self:center;margin-top:6px}
+  .thanks{display:none;margin-top:24px;font-family:var(--serif);font-size:22px;color:var(--accent)}
+  .note{margin-top:28px;font-size:14px;color:var(--muted)}
+
+  /* ---------- Gửi khách ---------- */
+  #share{background:var(--paper)}
+  #qr{display:flex;justify-content:center;margin:24px auto 6px}
+  #qr img,#qr canvas{width:160px;height:160px;padding:10px;background:#fff;border:1px solid var(--line)}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:10px 18px;font-size:14px;opacity:0;transition:.3s;z-index:99}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink);color:var(--accent-soft);text-align:center;padding:70px 20px 50px}
+  footer .script{color:#fff}
+  footer p{max-width:520px;margin:14px auto;font-family:var(--serif);font-style:italic;font-size:18px}
+  footer .date{letter-spacing:.3em;font-family:var(--serif);margin-top:20px}
+  footer .mono{margin-top:30px;letter-spacing:.3em;color:var(--accent)}
+
+  /* hiệu ứng hiện dần khi cuộn */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero img{animation:none}}
+</style>
+</head>
+<body id="top">
+
+<nav class="nav" id="nav">
+  <span class="mono">H · D</span>
+  <ul>
+    <li><a href="#top">Trang chủ</a></li>
+    <li><a href="#welcome">Lời ngỏ</a></li>
+    <li><a href="#wedding-day">Thông tin tiệc</a></li>
+    <li><a href="#rsvp">Xác nhận tham dự</a></li>
+  </ul>
+</nav>
+
+<!-- ===== ẢNH 1: ảnh bìa toàn màn hình ===== -->
+<header class="hero">
+  <img src="images/anh-1.jpg" alt="Ảnh cưới Hùng & Diệp" onerror="this.remove()">
+  <div class="inner">
+    <div class="eyebrow">We're getting married</div>
+    <h1>Hùng &amp; Diệp</h1>
+    <div class="date">17 . 11 . 2026</div>
+    <a class="scroll" href="#welcome">Scroll to begin</a>
+  </div>
+</header>
+
+<div class="strip"><b>Save our date</b> · 17 . 11 . 2026 · Nam Định, Việt Nam</div>
+
+<!-- ===== Lời ngỏ ===== -->
+<section id="welcome">
+  <div class="wrap reveal">
+    <div class="label">Welcome</div>
+    <h2 class="title">Dear family &amp; friends,</h2>
+    <p class="lead">Cảm ơn Cô/Chú, Anh/Chị đã luôn yêu thương, đồng hành và là một phần quan trọng trong hành trình của chúng mình. Sau những năm tháng cùng nhau đi qua bao vui buồn, hai đứa đã đến ngày muốn nắm tay nhau bước sang một chặng đường mới.</p>
+    <p class="lead">Sự hiện diện của mọi người trong ngày trọng đại này sẽ là niềm hạnh phúc lớn nhất đối với chúng mình.</p>
+    <div class="divider">With love,</div>
+    <div class="script">Hùng &amp; Diệp</div>
+  </div>
+</section>
+
+<!-- ===== Thông tin tiệc cưới ===== -->
+<section id="wedding-day">
+  <div class="wrap">
+    <div class="label reveal">Thông tin tiệc cưới</div>
+    <div class="event reveal" style="margin-top:34px">
+      <h3>Tiệc cưới</h3>
+      <div class="time">18:00, Thứ Ba 17.11.2026</div>
+      <div class="venue">Golden Palace (Tầng 3)</div>
+      <div class="addr">Số 98 Đại lộ Đông A, KĐT Hòa Vượng,<br>Phường Nam Định</div>
+      <a class="btn" href="https://maps.app.goo.gl/c9mbNcnJzfyp1h1j9" target="_blank" rel="noopener">Google Maps</a>
+    </div>
+
+    <div class="label reveal" style="margin-top:70px">Countdown</div>
+    <div class="countdown reveal" id="countdown">
+      <div><b id="cd-d">00</b><span>Days</span></div>
+      <div><b id="cd-h">00</b><span>Hours</span></div>
+      <div><b id="cd-m">00</b><span>Minutes</span></div>
+      <div><b id="cd-s">00</b><span>Seconds</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ẢNH 2: ảnh lớn giữa trang ===== -->
+<div class="photo2">
+  <img src="images/anh-2.jpg" alt="Ảnh cưới Hùng & Diệp" loading="lazy" onerror="this.remove()">
+  <div class="cap">Hùng &amp; Diệp</div>
+</div>
+
+<!-- ===== Xác nhận tham dự ===== -->
+<section id="rsvp">
+  <div class="wrap reveal">
+    <div class="label">RSVP</div>
+    <h2 class="title">Xác nhận tham dự</h2>
+    <p class="lead">Chúng mình rất mong được gặp bạn trong ngày trọng đại. Nếu có thể, xin vui lòng xác nhận tham dự cùng chúng mình.</p>
+
+    <form id="rsvp-form">
+      <div><label for="f-name">Họ và tên</label><input id="f-name" name="name" required></div>
+      <div><label for="f-phone">Số điện thoại (không bắt buộc)</label><input id="f-phone" name="phone" type="tel"></div>
+      <div>
+        <label>Xác nhận tham dự</label>
+        <div class="radio">
+          <label><input type="radio" name="attend" value="Rất vui được tham dự" checked> Rất vui được tham dự</label>
+          <label><input type="radio" name="attend" value="Rất tiếc không thể tham dự"> Rất tiếc không thể tham dự</label>
+        </div>
+      </div>
+      <div id="guests-wrap">
+        <label for="f-guests">Số lượng khách đi cùng</label>
+        <select id="f-guests" name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select>
+      </div>
+      <button class="btn solid" type="submit">Gửi</button>
+    </form>
+    <div class="thanks" id="thanks">Cảm ơn bạn đã phản hồi — hẹn gặp bạn nhé!</div>
+    <p class="note">Nếu cần liên hệ trực tiếp, vui lòng nhắn Zalo hoặc gọi điện cho cô dâu chú rể.</p>
+  </div>
+</section>
+
+<!-- ===== Gửi cho khách mời ===== -->
+<section id="share">
+  <div class="wrap reveal">
+    <div class="label">Share</div>
+    <h2 class="title">Gửi cho khách mời</h2>
+    <p class="lead">Anh chị tải tấm ảnh này về rồi gửi qua Zalo, Facebook hay in ra đều được.<br>Khách quét mã là mở được thiệp, không phải gõ link.</p>
+    <div id="qr"></div>
+    <div class="actions" style="margin-top:18px">
+      <button class="btn solid" id="dl">Tải ảnh thiệp</button>
+      <button class="btn" id="copy">Sao chép link thiệp</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="script">Hùng &amp; Diệp</div>
+  <p>With heartfelt thanks for the love and companionship you have always given us. Your presence on our wedding day would be the greatest joy for our families.</p>
+  <div class="date">17 . 11 . 2026</div>
+  <div class="mono">H · D</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+/* ================== CẤU HÌNH ================== */
+const WEDDING_TIME = new Date("2026-11-17T18:00:00+07:00");
+
+// (Tuỳ chọn) Lưu phản hồi RSVP vào Google Form — xem hướng dẫn trong HUONG-DAN.md.
+// Để trống formAction thì form vẫn hoạt động nhưng chỉ hiện lời cảm ơn, không lưu lại.
+const RSVP = {
+  formAction: "",               // vd: "https://docs.google.com/forms/d/e/XXXX/formResponse"
+  fields: { name: "entry.0000000001", phone: "entry.0000000002", attend: "entry.0000000003", guests: "entry.0000000004" }
+};
+/* ============================================== */
+
+const pageUrl = location.href.split("#")[0];
+
+// Thanh điều hướng
+const nav = document.getElementById("nav");
+addEventListener("scroll", () => nav.classList.toggle("scrolled", scrollY > 40), { passive: true });
+
+// Hiệu ứng hiện dần
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .15 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+// Đếm ngược
+const pad = n => String(n).padStart(2, "0");
+function tick() {
+  let s = Math.max(0, Math.floor((WEDDING_TIME - Date.now()) / 1000));
+  document.getElementById("cd-d").textContent = pad(Math.floor(s / 86400));
+  document.getElementById("cd-h").textContent = pad(Math.floor(s % 86400 / 3600));
+  document.getElementById("cd-m").textContent = pad(Math.floor(s % 3600 / 60));
+  document.getElementById("cd-s").textContent = pad(s % 60);
+}
+tick(); setInterval(tick, 1000);
+
+// RSVP
+const form = document.getElementById("rsvp-form");
+form.addEventListener("change", () => {
+  document.getElementById("guests-wrap").style.display = form.attend.value.startsWith("Rất vui") ? "" : "none";
+});
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  if (RSVP.formAction) {
+    const fd = new FormData();
+    fd.append(RSVP.fields.name, form.name.value);
+    fd.append(RSVP.fields.phone, form.phone.value);
+    fd.append(RSVP.fields.attend, form.attend.value);
+    fd.append(RSVP.fields.guests, form.attend.value.startsWith("Rất vui") ? form.guests.value : "0");
+    try { await fetch(RSVP.formAction, { method: "POST", mode: "no-cors", body: fd }); } catch (_) {}
+  }
+  form.style.display = "none";
+  document.getElementById("thanks").style.display = "block";
+});
+
+// Toast
+function toast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 2200);
+}
+
+// QR code
+let qrCanvas = null;
+if (window.QRCode) {
+  new QRCode(document.getElementById("qr"), { text: pageUrl, width: 320, height: 320, colorDark: "#3b3330", colorLight: "#ffffff" });
+  qrCanvas = document.querySelector("#qr canvas");
+}
+
+// Sao chép link
+document.getElementById("copy").onclick = async () => {
+  try { await navigator.clipboard.writeText(pageUrl); toast("Đã sao chép link thiệp"); }
+  catch (_) { prompt("Sao chép link này:", pageUrl); }
+};
+
+// Tải ảnh thiệp (ảnh 1080x1350 có ảnh cưới + QR)
+function loadImg(src) {
+  return new Promise(res => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = src; });
+}
+document.getElementById("dl").onclick = async () => {
+  toast("Đang dựng ảnh…");
+  await document.fonts.ready;
+  const W = 1080, H = 1350, c = document.createElement("canvas");
+  c.width = W; c.height = H;
+  const x = c.getContext("2d");
+  x.fillStyle = "#f7f2ea"; x.fillRect(0, 0, W, H);
+
+  const photo = await loadImg("images/anh-1.jpg");
+  const pH = 640;
+  if (photo) {
+    const r = Math.max(W / photo.width, pH / photo.height), w = photo.width * r, h = photo.height * r;
+    x.save(); x.beginPath(); x.rect(0, 0, W, pH); x.clip();
+    x.drawImage(photo, (W - w) / 2, (pH - h) / 2, w, h); x.restore();
+  } else {
+    const g = x.createLinearGradient(0, 0, W, pH); g.addColorStop(0, "#c9b49a"); g.addColorStop(1, "#8b735c");
+    x.fillStyle = g; x.fillRect(0, 0, W, pH);
+  }
+
+  x.textAlign = "center";
+  x.fillStyle = "#a8865b"; x.font = "400 120px 'Great Vibes'";
+  x.fillText("Hùng & Diệp", W / 2, 790);
+  x.fillStyle = "#3b3330"; x.font = "500 44px 'Cormorant Garamond'";
+  x.fillText("17 . 11 . 2026", W / 2, 860);
+  x.fillStyle = "#8a7f78"; x.font = "300 28px 'Be Vietnam Pro'";
+  x.fillText("18:00, Thứ Ba · Golden Palace (Tầng 3), Nam Định", W / 2, 910);
+
+  if (qrCanvas) {
+    x.fillStyle = "#fff"; x.fillRect(W / 2 - 150, 960, 300, 300);
+    x.drawImage(qrCanvas, W / 2 - 130, 980, 260, 260);
+  }
+  x.fillStyle = "#8a7f78"; x.font = "300 24px 'Be Vietnam Pro'";
+  x.fillText("Quét mã để mở thiệp", W / 2, 1300);
+
+  try {
+    const a = document.createElement("a");
+    a.download = "thiep-cuoi-hung-diep.png"; a.href = c.toDataURL("image/png"); a.click();
+  } catch (_) { toast("Hãy mở thiệp từ link GitHub Pages để tải ảnh"); }
+};
+</script>
+</body>
+</html>
