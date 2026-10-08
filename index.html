@@ -168,6 +168,7 @@
   .rsvp-success .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
 
   /* ---------- Gửi cho khách mời (ẢNH 2: ảnh thiệp có mã QR) ---------- */
+  .share[hidden] { display: none !important; }
   .share-card { text-align: center; }
   .share-preview { max-width: 300px; width: 100%; margin: 0 auto 22px; border: 1px solid var(--line); background: var(--beige); display: block; }
   .share-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
@@ -311,8 +312,8 @@
   </div>
 </section>
 
-<!-- ===== Gửi cho khách mời (ẢNH 2) ===== -->
-<section class="share" id="share" data-reveal>
+<!-- ===== Gửi cho khách mời (ẢNH 2) — ĐANG ẨN. Muốn hiện lại: xoá chữ "hidden" ở dòng dưới ===== -->
+<section class="share" id="share" data-reveal hidden>
   <p class="eyebrow center">Gửi cho khách mời</p>
   <p class="section-lede">Anh chị tải tấm ảnh này về rồi gửi qua Zalo, Facebook hay in ra đều được.
     Khách quét mã là mở được thiệp, không phải gõ link.</p>
